@@ -24,7 +24,7 @@ def final_score(score: int) -> None:
     parameters.dis.blit(value, value.get_rect(center=(parameters.dis_width // 2, parameters.dis_height // 2)))
 
 
-def snake(snake_list: list[tuple[tuple[int, int], str]]) -> None:  # сделать классом
+def snake(snake_list: list[tuple[tuple[int, int], str]]) -> None:
     parameters.dis.blit(resources.snake_head[snake_list[-1][1]], (snake_list[-1][0][0], snake_list[-1][0][1]))
     condition = snake_list[-1][1]
 
@@ -46,7 +46,7 @@ def message(msg: str, color: tuple[int, int, int], font: pygame.font = parameter
     parameters.dis.blit(msg, msg.get_rect(center=(x, y)))
 
 
-def hint() -> None:  # Сделать полупрозрачным
+def hint() -> None:
     msg_1 = parameters.score_font.render('Use', True, parameters.colors('blue'))
     msg_2 = parameters.score_font.render('to move', True, parameters.colors('blue'))
 

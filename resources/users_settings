@@ -1,0 +1,4 @@
+control_keys: arrow.png
+snake_skin: red
+apple_skin: red_apple.png
+background_image: background.jpg

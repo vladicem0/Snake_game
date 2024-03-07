@@ -237,10 +237,8 @@ def classic_game_loop(menu: pygame_menu.Menu, level: str = 'classic.map') -> Non
     snake_list: list[tuple[tuple[int, int], str]] = []
     snake_length = 1
 
-    food_x = round(random.randrange(0, parameters.dis_width - parameters.snake_block) /
-                   parameters.snake_block + 0.0) * parameters.snake_block
-    food_y = round(random.randrange(0, parameters.dis_height - parameters.snake_block) /
-                   parameters.snake_block + 0.0) * parameters.snake_block
+    food_x = random.randrange(0, parameters.dis_width - parameters.snake_block, parameters.snake_block)
+    food_y = random.randrange(0, parameters.dis_height - parameters.snake_block, parameters.snake_block)
 
     game_over = False
     game_close = False
@@ -302,10 +300,8 @@ def classic_game_loop(menu: pygame_menu.Menu, level: str = 'classic.map') -> Non
             hint()
 
         while (food_x, food_y) in obstacle + [block[0] for block in snake_list]:
-            food_x = round(random.randrange(0, parameters.dis_width - parameters.snake_block) /
-                           parameters.snake_block + 0.0) * parameters.snake_block
-            food_y = round(random.randrange(0, parameters.dis_height - parameters.snake_block) /
-                           parameters.snake_block + 0.0) * parameters.snake_block
+            food_x = random.randrange(0, parameters.dis_width - parameters.snake_block, parameters.snake_block)
+            food_y = random.randrange(0, parameters.dis_height - parameters.snake_block, parameters.snake_block)
 
         snake_x += snake_x_change
         snake_y += snake_y_change

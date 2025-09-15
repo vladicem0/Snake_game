@@ -25,9 +25,9 @@ users_settings = {}
 change = False
 
 with open('resources\\users_settings', 'r') as us:
-    sett = us.read().split('\n')
+    settings = us.read().split('\n')
 
-for string in sett:
+for string in settings:
     string = string.split(': ')
     users_settings[string[0]] = string[1]
 

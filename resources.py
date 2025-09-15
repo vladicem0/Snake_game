@@ -10,7 +10,7 @@ background_image = parameters.users_settings['background_image']
 
 # ---------------------------------------------------IMAGES-------------------------------------------------------------
 background = pygame.transform.scale((pygame.image.load(f'resources\\images\\background\\{background_image}'))
-                                    .convert_alpha(),(parameters.dis_width, parameters.dis_height))
+                                    .convert_alpha(), (parameters.dis_width, parameters.dis_height))
 
 apple_picture = pygame.transform.scale((pygame.image.load(f'resources\\images\\food\\{apple_skin}')).convert_alpha(),
                                        (parameters.snake_block, parameters.snake_block))
@@ -54,6 +54,13 @@ snake_tail = {
     'down': pygame.transform.rotate(tail, 180),
     'right': pygame.transform.rotate(tail, 270),
     'left': pygame.transform.rotate(tail, 90),
+}
+
+control_keys = {
+    'left': arrow,
+    'up': pygame.transform.rotate(arrow, 270),
+    'down': pygame.transform.rotate(arrow, 90),
+    'right': pygame.transform.rotate(arrow, 180),
 }
 
 # ---------------------------------------------------SOUNDS-------------------------------------------------------------
